@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-06T22:26:31.268379Z",
+  "updateTime": "2020-04-08T22:41:41.276435Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-billing.git",
+        "sha": "02aa33a674e97896855516df6fa57adb5202dc27"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
