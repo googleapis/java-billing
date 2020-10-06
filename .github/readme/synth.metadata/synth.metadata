@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-billing.git",
+        "sha": "57aaafab8ae58b938d73cecd73297bf2ad1b047a"
+      }
+    },
+    {
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "487eba79f8260e34205d8ceb1ebcc65685085e19"
+      }
+    }
+  ]
+}
