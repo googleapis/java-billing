@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Retrieves GCP Console billing accounts and associates them with projects.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/billing/v1/cloud_billing.proto")
@@ -538,39 +532,17 @@ public final class CloudBillingGrpc {
     return CloudBillingFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Retrieves GCP Console billing accounts and associates them with projects.
-   * </pre>
-   */
+  /** */
   public abstract static class CloudBillingImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets information about a billing account. The current authenticated user
-     * must be a [viewer of the billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void getBillingAccount(
         com.google.cloud.billing.v1.GetBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
       asyncUnimplementedUnaryCall(getGetBillingAccountMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the billing accounts that the current authenticated user has
-     * permission to
-     * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void listBillingAccounts(
         com.google.cloud.billing.v1.ListBillingAccountsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListBillingAccountsResponse>
@@ -578,56 +550,21 @@ public final class CloudBillingGrpc {
       asyncUnimplementedUnaryCall(getListBillingAccountsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a billing account's fields.
-     * Currently the only field that can be edited is `display_name`.
-     * The current authenticated user must have the `billing.accounts.update`
-     * IAM permission, which is typically given to the
-     * [administrator](https://cloud.google.com/billing/docs/how-to/billing-access)
-     * of the billing account.
-     * </pre>
-     */
+    /** */
     public void updateBillingAccount(
         com.google.cloud.billing.v1.UpdateBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateBillingAccountMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a billing account.
-     * This method can only be used to create
-     * [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-     * by GCP resellers.
-     * When creating a subaccount, the current authenticated user must have the
-     * `billing.accounts.update` IAM permission on the master account, which is
-     * typically given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * This method will return an error if the master account has not been
-     * provisioned as a reseller account.
-     * </pre>
-     */
+    /** */
     public void createBillingAccount(
         com.google.cloud.billing.v1.CreateBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateBillingAccountMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the projects associated with a billing account. The current
-     * authenticated user must have the `billing.resourceAssociations.list` IAM
-     * permission, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void listProjectBillingInfo(
         com.google.cloud.billing.v1.ListProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListProjectBillingInfoResponse>
@@ -635,16 +572,7 @@ public final class CloudBillingGrpc {
       asyncUnimplementedUnaryCall(getListProjectBillingInfoMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the billing information for a project. The current authenticated user
-     * must have [permission to view the
-     * project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ).
-     * </pre>
-     */
+    /** */
     public void getProjectBillingInfo(
         com.google.cloud.billing.v1.GetProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ProjectBillingInfo>
@@ -652,39 +580,7 @@ public final class CloudBillingGrpc {
       asyncUnimplementedUnaryCall(getGetProjectBillingInfoMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets or updates the billing account associated with a project. You specify
-     * the new billing account by setting the `billing_account_name` in the
-     * `ProjectBillingInfo` resource to the resource name of a billing account.
-     * Associating a project with an open billing account enables billing on the
-     * project and allows charges for resource usage. If the project already had a
-     * billing account, this method changes the billing account used for resource
-     * usage charges.
-     * *Note:* Incurred charges that have not yet been reported in the transaction
-     * history of the GCP Console might be billed to the new billing
-     * account, even if the charge occurred before the new billing account was
-     * assigned to the project.
-     * The current authenticated user must have ownership privileges for both the
-     * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ) and the [billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * You can disable billing on the project by setting the
-     * `billing_account_name` field to empty. This action disassociates the
-     * current billing account from the project. Any billable activity of your
-     * in-use services will stop, and your application could stop functioning as
-     * expected. Any unbilled charges to date will be billed to the previously
-     * associated account. The current authenticated user must be either an owner
-     * of the project or an owner of the billing account for the project.
-     * Note that associating a project with a *closed* billing account will have
-     * much the same effect as disabling billing on the project: any paid
-     * resources used by the project will be shut down. Thus, unless you wish to
-     * disable billing, you should always call this method with the name of an
-     * *open* billing account.
-     * </pre>
-     */
+    /** */
     public void updateProjectBillingInfo(
         com.google.cloud.billing.v1.UpdateProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ProjectBillingInfo>
@@ -692,48 +588,21 @@ public final class CloudBillingGrpc {
       asyncUnimplementedUnaryCall(getUpdateProjectBillingInfoMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy for a billing account.
-     * The caller must have the `billing.accounts.getIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getGetIamPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy for a billing account. Replaces any existing
-     * policy.
-     * The caller must have the `billing.accounts.setIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getSetIamPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Tests the access control policy for a billing account. This method takes
-     * the resource and a set of permissions as input and returns the subset of
-     * the input permissions that the caller is allowed for that resource.
-     * </pre>
-     */
+    /** */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -816,13 +685,7 @@ public final class CloudBillingGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Retrieves GCP Console billing accounts and associates them with projects.
-   * </pre>
-   */
+  /** */
   public static final class CloudBillingStub
       extends io.grpc.stub.AbstractAsyncStub<CloudBillingStub> {
     private CloudBillingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -834,15 +697,7 @@ public final class CloudBillingGrpc {
       return new CloudBillingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets information about a billing account. The current authenticated user
-     * must be a [viewer of the billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void getBillingAccount(
         com.google.cloud.billing.v1.GetBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
@@ -852,15 +707,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the billing accounts that the current authenticated user has
-     * permission to
-     * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void listBillingAccounts(
         com.google.cloud.billing.v1.ListBillingAccountsRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListBillingAccountsResponse>
@@ -871,18 +718,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a billing account's fields.
-     * Currently the only field that can be edited is `display_name`.
-     * The current authenticated user must have the `billing.accounts.update`
-     * IAM permission, which is typically given to the
-     * [administrator](https://cloud.google.com/billing/docs/how-to/billing-access)
-     * of the billing account.
-     * </pre>
-     */
+    /** */
     public void updateBillingAccount(
         com.google.cloud.billing.v1.UpdateBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
@@ -892,22 +728,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a billing account.
-     * This method can only be used to create
-     * [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-     * by GCP resellers.
-     * When creating a subaccount, the current authenticated user must have the
-     * `billing.accounts.update` IAM permission on the master account, which is
-     * typically given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * This method will return an error if the master account has not been
-     * provisioned as a reseller account.
-     * </pre>
-     */
+    /** */
     public void createBillingAccount(
         com.google.cloud.billing.v1.CreateBillingAccountRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.BillingAccount> responseObserver) {
@@ -917,16 +738,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the projects associated with a billing account. The current
-     * authenticated user must have the `billing.resourceAssociations.list` IAM
-     * permission, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void listProjectBillingInfo(
         com.google.cloud.billing.v1.ListProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListProjectBillingInfoResponse>
@@ -937,16 +749,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the billing information for a project. The current authenticated user
-     * must have [permission to view the
-     * project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ).
-     * </pre>
-     */
+    /** */
     public void getProjectBillingInfo(
         com.google.cloud.billing.v1.GetProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ProjectBillingInfo>
@@ -957,39 +760,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets or updates the billing account associated with a project. You specify
-     * the new billing account by setting the `billing_account_name` in the
-     * `ProjectBillingInfo` resource to the resource name of a billing account.
-     * Associating a project with an open billing account enables billing on the
-     * project and allows charges for resource usage. If the project already had a
-     * billing account, this method changes the billing account used for resource
-     * usage charges.
-     * *Note:* Incurred charges that have not yet been reported in the transaction
-     * history of the GCP Console might be billed to the new billing
-     * account, even if the charge occurred before the new billing account was
-     * assigned to the project.
-     * The current authenticated user must have ownership privileges for both the
-     * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ) and the [billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * You can disable billing on the project by setting the
-     * `billing_account_name` field to empty. This action disassociates the
-     * current billing account from the project. Any billable activity of your
-     * in-use services will stop, and your application could stop functioning as
-     * expected. Any unbilled charges to date will be billed to the previously
-     * associated account. The current authenticated user must be either an owner
-     * of the project or an owner of the billing account for the project.
-     * Note that associating a project with a *closed* billing account will have
-     * much the same effect as disabling billing on the project: any paid
-     * resources used by the project will be shut down. Thus, unless you wish to
-     * disable billing, you should always call this method with the name of an
-     * *open* billing account.
-     * </pre>
-     */
+    /** */
     public void updateProjectBillingInfo(
         com.google.cloud.billing.v1.UpdateProjectBillingInfoRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ProjectBillingInfo>
@@ -1000,16 +771,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy for a billing account.
-     * The caller must have the `billing.accounts.getIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void getIamPolicy(
         com.google.iam.v1.GetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -1019,17 +781,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy for a billing account. Replaces any existing
-     * policy.
-     * The caller must have the `billing.accounts.setIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public void setIamPolicy(
         com.google.iam.v1.SetIamPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.Policy> responseObserver) {
@@ -1039,15 +791,7 @@ public final class CloudBillingGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Tests the access control policy for a billing account. This method takes
-     * the resource and a set of permissions as input and returns the subset of
-     * the input permissions that the caller is allowed for that resource.
-     * </pre>
-     */
+    /** */
     public void testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request,
         io.grpc.stub.StreamObserver<com.google.iam.v1.TestIamPermissionsResponse>
@@ -1059,13 +803,7 @@ public final class CloudBillingGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Retrieves GCP Console billing accounts and associates them with projects.
-   * </pre>
-   */
+  /** */
   public static final class CloudBillingBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<CloudBillingBlockingStub> {
     private CloudBillingBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -1078,185 +816,66 @@ public final class CloudBillingGrpc {
       return new CloudBillingBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets information about a billing account. The current authenticated user
-     * must be a [viewer of the billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.BillingAccount getBillingAccount(
         com.google.cloud.billing.v1.GetBillingAccountRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetBillingAccountMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the billing accounts that the current authenticated user has
-     * permission to
-     * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ListBillingAccountsResponse listBillingAccounts(
         com.google.cloud.billing.v1.ListBillingAccountsRequest request) {
       return blockingUnaryCall(
           getChannel(), getListBillingAccountsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a billing account's fields.
-     * Currently the only field that can be edited is `display_name`.
-     * The current authenticated user must have the `billing.accounts.update`
-     * IAM permission, which is typically given to the
-     * [administrator](https://cloud.google.com/billing/docs/how-to/billing-access)
-     * of the billing account.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.BillingAccount updateBillingAccount(
         com.google.cloud.billing.v1.UpdateBillingAccountRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateBillingAccountMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a billing account.
-     * This method can only be used to create
-     * [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-     * by GCP resellers.
-     * When creating a subaccount, the current authenticated user must have the
-     * `billing.accounts.update` IAM permission on the master account, which is
-     * typically given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * This method will return an error if the master account has not been
-     * provisioned as a reseller account.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.BillingAccount createBillingAccount(
         com.google.cloud.billing.v1.CreateBillingAccountRequest request) {
       return blockingUnaryCall(
           getChannel(), getCreateBillingAccountMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the projects associated with a billing account. The current
-     * authenticated user must have the `billing.resourceAssociations.list` IAM
-     * permission, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ListProjectBillingInfoResponse listProjectBillingInfo(
         com.google.cloud.billing.v1.ListProjectBillingInfoRequest request) {
       return blockingUnaryCall(
           getChannel(), getListProjectBillingInfoMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the billing information for a project. The current authenticated user
-     * must have [permission to view the
-     * project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ).
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ProjectBillingInfo getProjectBillingInfo(
         com.google.cloud.billing.v1.GetProjectBillingInfoRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetProjectBillingInfoMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets or updates the billing account associated with a project. You specify
-     * the new billing account by setting the `billing_account_name` in the
-     * `ProjectBillingInfo` resource to the resource name of a billing account.
-     * Associating a project with an open billing account enables billing on the
-     * project and allows charges for resource usage. If the project already had a
-     * billing account, this method changes the billing account used for resource
-     * usage charges.
-     * *Note:* Incurred charges that have not yet been reported in the transaction
-     * history of the GCP Console might be billed to the new billing
-     * account, even if the charge occurred before the new billing account was
-     * assigned to the project.
-     * The current authenticated user must have ownership privileges for both the
-     * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ) and the [billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * You can disable billing on the project by setting the
-     * `billing_account_name` field to empty. This action disassociates the
-     * current billing account from the project. Any billable activity of your
-     * in-use services will stop, and your application could stop functioning as
-     * expected. Any unbilled charges to date will be billed to the previously
-     * associated account. The current authenticated user must be either an owner
-     * of the project or an owner of the billing account for the project.
-     * Note that associating a project with a *closed* billing account will have
-     * much the same effect as disabling billing on the project: any paid
-     * resources used by the project will be shut down. Thus, unless you wish to
-     * disable billing, you should always call this method with the name of an
-     * *open* billing account.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ProjectBillingInfo updateProjectBillingInfo(
         com.google.cloud.billing.v1.UpdateProjectBillingInfoRequest request) {
       return blockingUnaryCall(
           getChannel(), getUpdateProjectBillingInfoMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy for a billing account.
-     * The caller must have the `billing.accounts.getIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.Policy getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getGetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy for a billing account. Replaces any existing
-     * policy.
-     * The caller must have the `billing.accounts.setIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.Policy setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return blockingUnaryCall(getChannel(), getSetIamPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Tests the access control policy for a billing account. This method takes
-     * the resource and a set of permissions as input and returns the subset of
-     * the input permissions that the caller is allowed for that resource.
-     * </pre>
-     */
+    /** */
     public com.google.iam.v1.TestIamPermissionsResponse testIamPermissions(
         com.google.iam.v1.TestIamPermissionsRequest request) {
       return blockingUnaryCall(
@@ -1264,13 +883,7 @@ public final class CloudBillingGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Retrieves GCP Console billing accounts and associates them with projects.
-   * </pre>
-   */
+  /** */
   public static final class CloudBillingFutureStub
       extends io.grpc.stub.AbstractFutureStub<CloudBillingFutureStub> {
     private CloudBillingFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -1283,15 +896,7 @@ public final class CloudBillingGrpc {
       return new CloudBillingFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets information about a billing account. The current authenticated user
-     * must be a [viewer of the billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.BillingAccount>
         getBillingAccount(com.google.cloud.billing.v1.GetBillingAccountRequest request) {
@@ -1299,15 +904,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getGetBillingAccountMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the billing accounts that the current authenticated user has
-     * permission to
-     * [view](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ListBillingAccountsResponse>
         listBillingAccounts(com.google.cloud.billing.v1.ListBillingAccountsRequest request) {
@@ -1315,18 +912,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getListBillingAccountsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates a billing account's fields.
-     * Currently the only field that can be edited is `display_name`.
-     * The current authenticated user must have the `billing.accounts.update`
-     * IAM permission, which is typically given to the
-     * [administrator](https://cloud.google.com/billing/docs/how-to/billing-access)
-     * of the billing account.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.BillingAccount>
         updateBillingAccount(com.google.cloud.billing.v1.UpdateBillingAccountRequest request) {
@@ -1334,22 +920,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getUpdateBillingAccountMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a billing account.
-     * This method can only be used to create
-     * [billing subaccounts](https://cloud.google.com/billing/docs/concepts)
-     * by GCP resellers.
-     * When creating a subaccount, the current authenticated user must have the
-     * `billing.accounts.update` IAM permission on the master account, which is
-     * typically given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * This method will return an error if the master account has not been
-     * provisioned as a reseller account.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.BillingAccount>
         createBillingAccount(com.google.cloud.billing.v1.CreateBillingAccountRequest request) {
@@ -1357,16 +928,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getCreateBillingAccountMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the projects associated with a billing account. The current
-     * authenticated user must have the `billing.resourceAssociations.list` IAM
-     * permission, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ListProjectBillingInfoResponse>
         listProjectBillingInfo(com.google.cloud.billing.v1.ListProjectBillingInfoRequest request) {
@@ -1374,16 +936,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getListProjectBillingInfoMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the billing information for a project. The current authenticated user
-     * must have [permission to view the
-     * project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ProjectBillingInfo>
         getProjectBillingInfo(com.google.cloud.billing.v1.GetProjectBillingInfoRequest request) {
@@ -1391,39 +944,7 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getGetProjectBillingInfoMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets or updates the billing account associated with a project. You specify
-     * the new billing account by setting the `billing_account_name` in the
-     * `ProjectBillingInfo` resource to the resource name of a billing account.
-     * Associating a project with an open billing account enables billing on the
-     * project and allows charges for resource usage. If the project already had a
-     * billing account, this method changes the billing account used for resource
-     * usage charges.
-     * *Note:* Incurred charges that have not yet been reported in the transaction
-     * history of the GCP Console might be billed to the new billing
-     * account, even if the charge occurred before the new billing account was
-     * assigned to the project.
-     * The current authenticated user must have ownership privileges for both the
-     * [project](https://cloud.google.com/docs/permissions-overview#h.bgs0oxofvnoo
-     * ) and the [billing
-     * account](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * You can disable billing on the project by setting the
-     * `billing_account_name` field to empty. This action disassociates the
-     * current billing account from the project. Any billable activity of your
-     * in-use services will stop, and your application could stop functioning as
-     * expected. Any unbilled charges to date will be billed to the previously
-     * associated account. The current authenticated user must be either an owner
-     * of the project or an owner of the billing account for the project.
-     * Note that associating a project with a *closed* billing account will have
-     * much the same effect as disabling billing on the project: any paid
-     * resources used by the project will be shut down. Thus, unless you wish to
-     * disable billing, you should always call this method with the name of an
-     * *open* billing account.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ProjectBillingInfo>
         updateProjectBillingInfo(
@@ -1432,48 +953,21 @@ public final class CloudBillingGrpc {
           getChannel().newCall(getUpdateProjectBillingInfoMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the access control policy for a billing account.
-     * The caller must have the `billing.accounts.getIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [viewers](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         getIamPolicy(com.google.iam.v1.GetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the access control policy for a billing account. Replaces any existing
-     * policy.
-     * The caller must have the `billing.accounts.setIamPolicy` permission on the
-     * account, which is often given to billing account
-     * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.iam.v1.Policy>
         setIamPolicy(com.google.iam.v1.SetIamPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetIamPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Tests the access control policy for a billing account. This method takes
-     * the resource and a set of permissions as input and returns the subset of
-     * the input permissions that the caller is allowed for that resource.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.iam.v1.TestIamPermissionsResponse>
         testIamPermissions(com.google.iam.v1.TestIamPermissionsRequest request) {

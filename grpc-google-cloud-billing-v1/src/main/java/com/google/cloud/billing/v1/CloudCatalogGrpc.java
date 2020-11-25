@@ -22,15 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * A catalog of Google Cloud Platform services and SKUs.
- * Provides pricing information and metadata on Google Cloud Platform services
- * and SKUs.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/billing/v1/cloud_catalog.proto")
@@ -169,24 +161,10 @@ public final class CloudCatalogGrpc {
     return CloudCatalogFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * A catalog of Google Cloud Platform services and SKUs.
-   * Provides pricing information and metadata on Google Cloud Platform services
-   * and SKUs.
-   * </pre>
-   */
+  /** */
   public abstract static class CloudCatalogImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all public cloud services.
-     * </pre>
-     */
+    /** */
     public void listServices(
         com.google.cloud.billing.v1.ListServicesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListServicesResponse>
@@ -194,13 +172,7 @@ public final class CloudCatalogGrpc {
       asyncUnimplementedUnaryCall(getListServicesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all publicly available SKUs for a given cloud service.
-     * </pre>
-     */
+    /** */
     public void listSkus(
         com.google.cloud.billing.v1.ListSkusRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListSkusResponse>
@@ -228,15 +200,7 @@ public final class CloudCatalogGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * A catalog of Google Cloud Platform services and SKUs.
-   * Provides pricing information and metadata on Google Cloud Platform services
-   * and SKUs.
-   * </pre>
-   */
+  /** */
   public static final class CloudCatalogStub
       extends io.grpc.stub.AbstractAsyncStub<CloudCatalogStub> {
     private CloudCatalogStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -248,13 +212,7 @@ public final class CloudCatalogGrpc {
       return new CloudCatalogStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all public cloud services.
-     * </pre>
-     */
+    /** */
     public void listServices(
         com.google.cloud.billing.v1.ListServicesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListServicesResponse>
@@ -265,13 +223,7 @@ public final class CloudCatalogGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all publicly available SKUs for a given cloud service.
-     * </pre>
-     */
+    /** */
     public void listSkus(
         com.google.cloud.billing.v1.ListSkusRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.billing.v1.ListSkusResponse>
@@ -281,15 +233,7 @@ public final class CloudCatalogGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * A catalog of Google Cloud Platform services and SKUs.
-   * Provides pricing information and metadata on Google Cloud Platform services
-   * and SKUs.
-   * </pre>
-   */
+  /** */
   public static final class CloudCatalogBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<CloudCatalogBlockingStub> {
     private CloudCatalogBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -302,40 +246,20 @@ public final class CloudCatalogGrpc {
       return new CloudCatalogBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all public cloud services.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ListServicesResponse listServices(
         com.google.cloud.billing.v1.ListServicesRequest request) {
       return blockingUnaryCall(getChannel(), getListServicesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all publicly available SKUs for a given cloud service.
-     * </pre>
-     */
+    /** */
     public com.google.cloud.billing.v1.ListSkusResponse listSkus(
         com.google.cloud.billing.v1.ListSkusRequest request) {
       return blockingUnaryCall(getChannel(), getListSkusMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * A catalog of Google Cloud Platform services and SKUs.
-   * Provides pricing information and metadata on Google Cloud Platform services
-   * and SKUs.
-   * </pre>
-   */
+  /** */
   public static final class CloudCatalogFutureStub
       extends io.grpc.stub.AbstractFutureStub<CloudCatalogFutureStub> {
     private CloudCatalogFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -348,13 +272,7 @@ public final class CloudCatalogGrpc {
       return new CloudCatalogFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all public cloud services.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ListServicesResponse>
         listServices(com.google.cloud.billing.v1.ListServicesRequest request) {
@@ -362,13 +280,7 @@ public final class CloudCatalogGrpc {
           getChannel().newCall(getListServicesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all publicly available SKUs for a given cloud service.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.billing.v1.ListSkusResponse>
         listSkus(com.google.cloud.billing.v1.ListSkusRequest request) {
