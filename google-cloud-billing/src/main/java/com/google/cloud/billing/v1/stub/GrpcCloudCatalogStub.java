@@ -91,11 +91,21 @@ public class GrpcCloudCatalogStub extends CloudCatalogStub {
         CloudCatalogStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcCloudCatalogStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcCloudCatalogStub(CloudCatalogStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcCloudCatalogCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcCloudCatalogStub, using the given settings. This is protected so
+   * that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcCloudCatalogStub(
       CloudCatalogStubSettings settings,
       ClientContext clientContext,
