@@ -329,7 +329,7 @@ public class CloudBillingClient implements BackgroundResource {
    * [administrators](https://cloud.google.com/billing/docs/how-to/billing-access). This method will
    * return an error if the master account has not been provisioned as a reseller account.
    *
-   * @param billing_account Required. The billing account resource to create. Currently
+   * @param billingAccount Required. The billing account resource to create. Currently
    *     CreateBillingAccount only supports subaccount creation, so any created billing accounts
    *     must be under a provided master billing account.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -522,7 +522,7 @@ public class CloudBillingClient implements BackgroundResource {
    *
    * @param name Required. The resource name of the project associated with the billing information
    *     that you want to update. For example, `projects/tokyo-rain-123`.
-   * @param project_billing_info The new billing information for the project. Read-only fields are
+   * @param projectBillingInfo The new billing information for the project. Read-only fields are
    *     ignored; thus, you can leave empty all fields except `billing_account_name`.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
