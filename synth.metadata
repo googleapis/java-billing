@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "857f70daef9f4c38f042fb3dfb7b8423ae18fd19",
-        "internalRef": "346372957"
+        "sha": "6d65640b1fcbdf26ea76cb720de0ac138cae9bed",
+        "internalRef": "347036369"
       }
     },
     {
@@ -165,6 +165,7 @@
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/ServiceName.java",
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/ServiceOrBuilder.java",
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/Sku.java",
+    "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/SkuName.java",
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/SkuOrBuilder.java",
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/UpdateBillingAccountRequest.java",
     "proto-google-cloud-billing-v1/src/main/java/com/google/cloud/billing/v1/UpdateBillingAccountRequestOrBuilder.java",
