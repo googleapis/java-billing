@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.3](https://www.github.com/googleapis/java-billing/compare/v1.2.2...v1.2.3) (2021-07-14)
+
+
+### Bug Fixes
+
+* owlbot post-processor should generate README ([#1154](https://www.github.com/googleapis/java-billing/issues/1154)) ([#456](https://www.github.com/googleapis/java-billing/issues/456)) ([224ef7c](https://www.github.com/googleapis/java-billing/commit/224ef7c5fee2ae1c2bcc770436720266b61444c9)), closes [#1146](https://www.github.com/googleapis/java-billing/issues/1146) [#1147](https://www.github.com/googleapis/java-billing/issues/1147)
+
 ### [1.2.2](https://www.github.com/googleapis/java-billing/compare/v1.2.1...v1.2.2) (2021-07-05)
 
 
