@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/googleapis/java-billing/compare/v1.2.2...v1.3.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#481](https://www.github.com/googleapis/java-billing/issues/481)) ([9aa1f53](https://www.github.com/googleapis/java-billing/commit/9aa1f5350120e9bb5207b00f27c65c3653444451))
+
 ### [1.2.2](https://www.github.com/googleapis/java-billing/compare/v1.2.1...v1.2.2) (2021-07-05)
 
 
