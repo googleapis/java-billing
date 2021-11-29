@@ -144,8 +144,7 @@ public final class CloudBillingProto {
           + "\030UpdateProjectBillingInfo\0228.google.cloud.billing.v1.UpdateProjectBillingInfoRequest\032+.google.cloud.billing.v1.ProjectBillingInfo\"[\202\323\344\223\0029\032!/v1/{name=projects/*}/billingInfo:\024project_billing_info\332A\031name,project_billing_info\022\213\001\n"
           + "\014GetIamPolicy\022\".google.iam.v1.GetIamPolicyRequest\032\025.google.iam.v1.Policy\"@\202\323\344\223\002/\022-/v1/{resource=billingAccounts/*}:getIamPolicy\332A\010resource\022\225\001\n"
           + "\014SetIamPolicy\022\".google.iam.v1.SetIamPolicyRequest\032\025.google.iam.v1.Policy\"J\202\323\344\223\0022\"-/v1/{resource=billingAccounts/*}:setIamPolicy:\001*\332A\017resource,policy\022\300\001\n"
-          + "\022TestIamPermissions\022(.google.iam.v1.TestIamPermissionsRequest\032).googl"
-          + "e.iam.v1.TestIamPermissionsResponse\"U\202\323\344\223\0028\"3/v1/{resource=billingAccounts/*}:testIamPermissions:\001*\332A\024resource,permissions\032O\312A\033cloudbilling.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformBr\n"
+          + "\022TestIamPermissions\022(.google.iam.v1.TestIamPermissionsRequest\032).google.iam.v1.TestIamPermissionsResponse\"U\202\323\344\223\0028\"3/v1/{resource=billingAccounts/*}:testIamPermissions:\001*\332A\024resource,permissions\032O\312A\033cloudbilling.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformBr\n"
           + "\033com.google.cloud.billing.v1B\021CloudBillingProtoP\001Z>google.golang.org/genpr"
           + "oto/googleapis/cloud/billing/v1;billingb\006proto3"
     };

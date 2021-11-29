@@ -81,8 +81,7 @@ public final class CloudCatalogProto {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "+google/cloud/billing/v1/cloud_catalog."
-          + "proto\022\027google.cloud.billing.v1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\027google/type/money.proto\"\235\001\n"
+          + "+google/cloud/billing/v1/cloud_catalog.proto\022\027google.cloud.billing.v1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\027google/type/money.proto\"\235\001\n"
           + "\007Service\022\014\n"
           + "\004name\030\001 \001(\t\022\022\n\n"
           + "service_id\030\002 \001(\t\022\024\n"
