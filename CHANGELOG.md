@@ -1,5 +1,99 @@
 # Changelog
 
+## [1.0.0](https://github.com/googleapis/java-billing/compare/java-billing-v2.1.4...java-billing-v1.0.0) (2022-01-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* release gapic-generator-java v2.0.0 (#485)
+* 1.0.0
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#413](https://github.com/googleapis/java-billing/issues/413)) ([ef341dd](https://github.com/googleapis/java-billing/commit/ef341dd4cb79b0d73a9815d886e24949c1cfecf9))
+* **deps:** adopt flatten plugin and google-cloud-shared-dependencies ([#129](https://github.com/googleapis/java-billing/issues/129)) ([2150b92](https://github.com/googleapis/java-billing/commit/2150b921462fed1bb264aee3a8d332580535504f))
+* initial generation ([f5ac3fc](https://github.com/googleapis/java-billing/commit/f5ac3fc633951f1c4ed0fc6852435bcac7a46631))
+* promote to GA ([#28](https://github.com/googleapis/java-billing/issues/28)) ([9f27c74](https://github.com/googleapis/java-billing/commit/9f27c747dd00c607d4f96000bb40343b8d119c5d))
+* release gapic-generator-java v2.0.0 ([#485](https://github.com/googleapis/java-billing/issues/485)) ([733fd5e](https://github.com/googleapis/java-billing/commit/733fd5e936cfee9dc26ab0de2ea8c7549a3851a6))
+* Remove use of deprecated gradle command in java README ([#1196](https://github.com/googleapis/java-billing/issues/1196)) ([#508](https://github.com/googleapis/java-billing/issues/508)) ([1a0684f](https://github.com/googleapis/java-billing/commit/1a0684f7b2d629680956097cd053285796f9f8a9))
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#1130](https://github.com/googleapis/java-billing/issues/1130)) ([#440](https://github.com/googleapis/java-billing/issues/440)) ([5972d86](https://github.com/googleapis/java-billing/commit/5972d86f359aa2059c96002b0a66063223d880b6))
+* **java:** add -ntp flag to native image testing command ([#1299](https://github.com/googleapis/java-billing/issues/1299)) ([#570](https://github.com/googleapis/java-billing/issues/570)) ([04302fc](https://github.com/googleapis/java-billing/commit/04302fc4d465ab0d21711d12b4c191917b34ca92))
+* **java:** java 17 dependency arguments ([#1266](https://github.com/googleapis/java-billing/issues/1266)) ([#552](https://github.com/googleapis/java-billing/issues/552)) ([d4550af](https://github.com/googleapis/java-billing/commit/d4550afc8a131e611f27ea3ff56aeb72c0ce8306))
+* **java:** run Maven in plain console-friendly mode ([#1301](https://github.com/googleapis/java-billing/issues/1301)) ([#576](https://github.com/googleapis/java-billing/issues/576)) ([4ef65b2](https://github.com/googleapis/java-billing/commit/4ef65b2548d19622f1dd534639f801f4285af7a9))
+* migrate billing/v1 to grpc_service_config ([#146](https://github.com/googleapis/java-billing/issues/146)) ([9f29581](https://github.com/googleapis/java-billing/commit/9f29581ca034d56e1770714833dba468330bb093))
+* owlbot post-processor should generate README ([#1154](https://github.com/googleapis/java-billing/issues/1154)) ([#456](https://github.com/googleapis/java-billing/issues/456)) ([224ef7c](https://github.com/googleapis/java-billing/commit/224ef7c5fee2ae1c2bcc770436720266b61444c9)), closes [#1146](https://github.com/googleapis/java-billing/issues/1146) [#1147](https://github.com/googleapis/java-billing/issues/1147)
+* release scripts from issuing overlapping phases ([#385](https://github.com/googleapis/java-billing/issues/385)) ([dfda3c6](https://github.com/googleapis/java-billing/commit/dfda3c6ed2a903d0c7816567d54192c7063f9b05))
+* typo ([#382](https://github.com/googleapis/java-billing/issues/382)) ([7fe805b](https://github.com/googleapis/java-billing/commit/7fe805bb0f5ef9f9cbb1ac3c13de52959b110d14))
+
+
+### Documentation
+
+* generate sample code in the Java microgenerator ([#320](https://github.com/googleapis/java-billing/issues/320)) ([44d60d6](https://github.com/googleapis/java-billing/commit/44d60d606a0e39f29f9e8baba0cb7cc1a70a4e77))
+* **regen:** update sample code to set total timeout, add API client header test ([f491fc0](https://github.com/googleapis/java-billing/commit/f491fc083e288083a7d4623a0982c0a51a41d3d5))
+
+
+### Dependencies
+
+* update core dependencies ([#1](https://github.com/googleapis/java-billing/issues/1)) ([2fc093e](https://github.com/googleapis/java-billing/commit/2fc093ebabb18ce4544df9a9f00a41ecac9615b5))
+* update core dependencies ([#35](https://github.com/googleapis/java-billing/issues/35)) ([786a990](https://github.com/googleapis/java-billing/commit/786a990da7631ed593da390451f9d7789871d86d))
+* update core dependencies ([#37](https://github.com/googleapis/java-billing/issues/37)) ([aa4e69e](https://github.com/googleapis/java-billing/commit/aa4e69ee5b1fa0f2012346b932d107cac914fd2d))
+* update core dependencies to v1.53.1 ([#6](https://github.com/googleapis/java-billing/issues/6)) ([08ee8cb](https://github.com/googleapis/java-billing/commit/08ee8cb36982cdbc3230093460ec6b975ca6bfe8))
+* update dependency com.google.api:api-common to v1.9.0 ([#55](https://github.com/googleapis/java-billing/issues/55)) ([1e10269](https://github.com/googleapis/java-billing/commit/1e10269e561576eff869f960e0ceb695b6e94008))
+* update dependency com.google.api:api-common to v1.9.1 ([#107](https://github.com/googleapis/java-billing/issues/107)) ([e3f4372](https://github.com/googleapis/java-billing/commit/e3f437246fd8a6122b7f5ee52967b2e4bbd4aa66))
+* update dependency com.google.api:api-common to v1.9.2 ([#115](https://github.com/googleapis/java-billing/issues/115)) ([9c5b80e](https://github.com/googleapis/java-billing/commit/9c5b80eb5d4ce8775b0e313c6f55b991a0437055))
+* update dependency com.google.api.grpc:proto-google-common-protos to v1.18.0 ([#95](https://github.com/googleapis/java-billing/issues/95)) ([50afb0e](https://github.com/googleapis/java-billing/commit/50afb0e301f97194bf58c78b0133606cf140784f))
+* update dependency com.google.cloud:google-cloud-core to v1.92.4 ([#7](https://github.com/googleapis/java-billing/issues/7)) ([d389f8a](https://github.com/googleapis/java-billing/commit/d389f8ab821f461cd04830e38780097d9d172018))
+* update dependency com.google.cloud:google-cloud-core to v1.92.5 ([7bbb400](https://github.com/googleapis/java-billing/commit/7bbb4003ea52489fb69d9be86731b10d2d2c9cd0))
+* update dependency com.google.cloud:google-cloud-core to v1.93.4 ([#62](https://github.com/googleapis/java-billing/issues/62)) ([a5d1152](https://github.com/googleapis/java-billing/commit/a5d1152e094942225ec33ec7a888fac572b33cbc))
+* update dependency com.google.cloud:google-cloud-core to v1.93.5 ([#108](https://github.com/googleapis/java-billing/issues/108)) ([3f36a7a](https://github.com/googleapis/java-billing/commit/3f36a7a10df4c5d025c006d901c55a4889b1483f))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.0 ([#187](https://github.com/googleapis/java-billing/issues/187)) ([9003923](https://github.com/googleapis/java-billing/commit/9003923e84ae7c8bebaacdf5e65c604a3ab62c78))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.10.2 ([#206](https://github.com/googleapis/java-billing/issues/206)) ([ac9e9e6](https://github.com/googleapis/java-billing/commit/ac9e9e64f79d924a3eb660c8259513102f0b9f27))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.12.1 ([#224](https://github.com/googleapis/java-billing/issues/224)) ([d639d06](https://github.com/googleapis/java-billing/commit/d639d067c2d8fdfc7c5d4d108a65fe379f74a89c))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.13.0 ([#231](https://github.com/googleapis/java-billing/issues/231)) ([bd0efd8](https://github.com/googleapis/java-billing/commit/bd0efd81acb2ecac1c43bd40f0e8d4f29fdb9867))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.14.1 ([#249](https://github.com/googleapis/java-billing/issues/249)) ([fdc471d](https://github.com/googleapis/java-billing/commit/fdc471dc719b061093066a01b755dec83472b796))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.15.0 ([#259](https://github.com/googleapis/java-billing/issues/259)) ([c73f098](https://github.com/googleapis/java-billing/commit/c73f09830e7dbb6998953e8ae009873448e066c7))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.0 ([#275](https://github.com/googleapis/java-billing/issues/275)) ([0e27f37](https://github.com/googleapis/java-billing/commit/0e27f372f4e2cedb8c82c8d240429c53f0b49fa1))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.1 ([#284](https://github.com/googleapis/java-billing/issues/284)) ([8409e6a](https://github.com/googleapis/java-billing/commit/8409e6a3a055f3dec1da8393c120243270929c40))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.17.0 ([#289](https://github.com/googleapis/java-billing/issues/289)) ([6f188e8](https://github.com/googleapis/java-billing/commit/6f188e8424e50640c7aaa32396f6d2f324b45013))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.18.0 ([#301](https://github.com/googleapis/java-billing/issues/301)) ([3006258](https://github.com/googleapis/java-billing/commit/30062584d5e782aef61e746c90ece5321cca4aeb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.19.0 ([#331](https://github.com/googleapis/java-billing/issues/331)) ([65c428a](https://github.com/googleapis/java-billing/commit/65c428a3b9802a92fe007bd90ddc8ed07869e879))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.0 ([#341](https://github.com/googleapis/java-billing/issues/341)) ([08f09a8](https://github.com/googleapis/java-billing/commit/08f09a881754db5e97feb68b6853f0c43249591a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.20.1 ([#355](https://github.com/googleapis/java-billing/issues/355)) ([5bb479e](https://github.com/googleapis/java-billing/commit/5bb479e7588bdf98e917178dc60a5288f992a5e7))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.0 ([#371](https://github.com/googleapis/java-billing/issues/371)) ([6c2b92e](https://github.com/googleapis/java-billing/commit/6c2b92e81f466011b991df93baace51a3cdc9315))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.21.1 ([#388](https://github.com/googleapis/java-billing/issues/388)) ([74e8a2e](https://github.com/googleapis/java-billing/commit/74e8a2e22db2ea4cc0f50d17b5789dd4724b0b94))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.2 ([#147](https://github.com/googleapis/java-billing/issues/147)) ([319baeb](https://github.com/googleapis/java-billing/commit/319baeb5a9be9d9562f5522b14da21ba723610e8))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.8.6 ([b7d938c](https://github.com/googleapis/java-billing/commit/b7d938cd0eb33730000668c328d73c1542ea8a46))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.9.0 ([#171](https://github.com/googleapis/java-billing/issues/171)) ([6117e8c](https://github.com/googleapis/java-billing/commit/6117e8ce2e684aaf10525baabee828fa88d954bb))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1 ([#391](https://github.com/googleapis/java-billing/issues/391)) ([726b551](https://github.com/googleapis/java-billing/commit/726b551c8006acfded9d8c2e44d39e96e1e75c1a))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.1.0 ([#402](https://github.com/googleapis/java-billing/issues/402)) ([adafaac](https://github.com/googleapis/java-billing/commit/adafaac2ef2236f982312ddda35d02a8b3c4a17e))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#412](https://github.com/googleapis/java-billing/issues/412)) ([2dc699e](https://github.com/googleapis/java-billing/commit/2dc699e8f71b3c87e7d05649224ca1984830bb71))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#424](https://github.com/googleapis/java-billing/issues/424)) ([4b1cb35](https://github.com/googleapis/java-billing/commit/4b1cb352b6930d3f82dfd9a8ee9e6ee411458c43))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#444](https://github.com/googleapis/java-billing/issues/444)) ([9d59a7d](https://github.com/googleapis/java-billing/commit/9d59a7d91b6c2674db85a3d98742051cd4029847))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2 ([#486](https://github.com/googleapis/java-billing/issues/486)) ([f81ad04](https://github.com/googleapis/java-billing/commit/f81ad04d2c6ea5d53e5525b28eb4f04792339c89))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.0.1 ([#491](https://github.com/googleapis/java-billing/issues/491)) ([3e39fb9](https://github.com/googleapis/java-billing/commit/3e39fb93dcaf6127f1ea98ea8d0dea66263ed3c1))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.1.0 ([#500](https://github.com/googleapis/java-billing/issues/500)) ([34dc7d4](https://github.com/googleapis/java-billing/commit/34dc7d4f49f494cf01e40d9dd79d7e22761bbc38))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.0 ([#511](https://github.com/googleapis/java-billing/issues/511)) ([c23dc44](https://github.com/googleapis/java-billing/commit/c23dc44d11289b7a9bdc3f0ab55988134125b4d8))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.2.1 ([#525](https://github.com/googleapis/java-billing/issues/525)) ([b118705](https://github.com/googleapis/java-billing/commit/b118705358105fe6a3a1a564ba7266869f034b87))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.3.0 ([#532](https://github.com/googleapis/java-billing/issues/532)) ([6af82b2](https://github.com/googleapis/java-billing/commit/6af82b22fe41785793b31628ae4921080b43b7b4))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.4.0 ([#545](https://github.com/googleapis/java-billing/issues/545)) ([ed8049b](https://github.com/googleapis/java-billing/commit/ed8049b32822ce008c7877fcb2b4094d5516d673))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.0 ([#562](https://github.com/googleapis/java-billing/issues/562)) ([f0a90e0](https://github.com/googleapis/java-billing/commit/f0a90e00bcbec3f752db818fe7459c211fa4ad1f))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.5.1 ([#567](https://github.com/googleapis/java-billing/issues/567)) ([de802b1](https://github.com/googleapis/java-billing/commit/de802b1eb263a6e3606b091808b8018c2ae24dac))
+* update dependency com.google.guava:guava-bom to v28.2-android ([#2](https://github.com/googleapis/java-billing/issues/2)) ([fe57c8e](https://github.com/googleapis/java-billing/commit/fe57c8eee55a2c380f7c5184604dd60f69724067))
+* update dependency com.google.guava:guava-bom to v29 ([#67](https://github.com/googleapis/java-billing/issues/67)) ([754d4f6](https://github.com/googleapis/java-billing/commit/754d4f68b20316332f4e674f6d6d20e95b973845))
+* update dependency com.google.protobuf:protobuf-java to v3.11.3 ([#9](https://github.com/googleapis/java-billing/issues/9)) ([ed1a000](https://github.com/googleapis/java-billing/commit/ed1a00004253cad0e8293f41ae7893ca27bac194))
+* update dependency com.google.protobuf:protobuf-java to v3.11.4 ([f84d5ee](https://github.com/googleapis/java-billing/commit/f84d5ee7aca5ac931f1466279c8fe1c97a20d4c1))
+* update dependency com.google.protobuf:protobuf-java to v3.12.0 ([#100](https://github.com/googleapis/java-billing/issues/100)) ([ec9a2ca](https://github.com/googleapis/java-billing/commit/ec9a2ca64b712b26399d0d6a6ca9818e2f6d04d5))
+* update dependency com.google.protobuf:protobuf-java to v3.12.2 ([#105](https://github.com/googleapis/java-billing/issues/105)) ([1e34acb](https://github.com/googleapis/java-billing/commit/1e34acb932d11c886ed8e8e26047d3c429c8dbb8))
+* update dependency io.grpc:grpc-bom to v1.27.1 ([e7e6308](https://github.com/googleapis/java-billing/commit/e7e6308d2bc7bb20e7f14b4b2404804ecbd39557))
+* update dependency io.grpc:grpc-bom to v1.29.0 ([#87](https://github.com/googleapis/java-billing/issues/87)) ([0d14162](https://github.com/googleapis/java-billing/commit/0d14162c88a00a2b07a0e8c5c6893cb0e46ef9f2))
+* update dependency io.grpc:grpc-bom to v1.30.0 ([#120](https://github.com/googleapis/java-billing/issues/120)) ([b53e066](https://github.com/googleapis/java-billing/commit/b53e066423cb9561814dfc40bffa77f54a137311))
+* update dependency org.threeten:threetenbp to v1.4.3 ([#46](https://github.com/googleapis/java-billing/issues/46)) ([dd501d5](https://github.com/googleapis/java-billing/commit/dd501d5cdff1ca9e930c92abc56209da44e45af3))
+* update dependency org.threeten:threetenbp to v1.4.4 ([#89](https://github.com/googleapis/java-billing/issues/89)) ([cb6ab45](https://github.com/googleapis/java-billing/commit/cb6ab45d1f1f21faa79af8a50fc9daa92b8707e2))
+
 ### [2.1.4](https://www.github.com/googleapis/java-billing/compare/v2.1.3...v2.1.4) (2021-12-03)
 
 
