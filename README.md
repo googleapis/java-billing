@@ -20,6 +20,7 @@ If you are using Maven, add this to your pom.xml file:
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-billing</artifactId>
   <version>2.1.11</version>
+</dependency>
 ```
 
 If you are using Gradle without BOM, add this to your dependencies
