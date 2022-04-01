@@ -1,5 +1,19 @@
 # Changelog
 
+### [2.1.11](https://github.com/googleapis/java-billing/compare/v2.1.10...v2.1.11) (2022-03-29)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v2.9.0 ([#637](https://github.com/googleapis/java-billing/issues/637)) ([dac500e](https://github.com/googleapis/java-billing/commit/dac500ee685b2b3c13a04a8a8d1edf14144363b1))
+
+### [2.1.10](https://github.com/googleapis/java-billing/compare/v2.1.9...v2.1.10) (2022-03-22)
+
+
+### Dependencies
+
+* update actions/checkout action to v3 ([#623](https://github.com/googleapis/java-billing/issues/623)) ([a115ffb](https://github.com/googleapis/java-billing/commit/a115ffbbaa88f9f3f2eae099b9fd7d5d77328609))
+
 ### [2.1.9](https://github.com/googleapis/java-billing/compare/v2.1.8...v2.1.9) (2022-03-02)
 
 

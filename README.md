@@ -19,20 +19,19 @@ If you are using Maven, add this to your pom.xml file:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-billing</artifactId>
-  <version>2.1.9</version>
-</dependency>
+  <version>2.1.11</version>
 ```
 
 If you are using Gradle without BOM, add this to your dependencies
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-billing:2.1.9'
+implementation 'com.google.cloud:google-cloud-billing:2.1.11'
 ```
 
 If you are using SBT, add this to your dependencies
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-billing" % "2.1.9"
+libraryDependencies += "com.google.cloud" % "google-cloud-billing" % "2.1.11"
 ```
 
 ## Authentication
