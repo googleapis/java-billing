@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.5](https://github.com/googleapis/java-billing/compare/v2.3.4...v2.3.5) (2022-10-04)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([c25bdc9](https://github.com/googleapis/java-billing/commit/c25bdc92785ba2474174df0a4e21064efc9d4d71))
+
 ## [2.3.4](https://github.com/googleapis/java-billing/compare/v2.3.3...v2.3.4) (2022-10-03)
 
 
